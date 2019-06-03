@@ -1,0 +1,82 @@
+<!--
+
+<form #EdrawalRequestForm="ngForm"(ngSubmit)="onSubmit(EdrawalRequestForm.value)">
+  <input name="voucherID" [(ngModel)]="voucherID">
+  <input name="voucherPin" [(ngModel)]="voucherPin">
+  <input name="bankType" [(ngModel)]="bankType">
+  <input name="randAmount" [(ngModel)]="randAmount">
+  <button type="submit">Save</button>
+</form>
+
+-->
+
+<mat-card><mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+
+    <mat-expansion-panel-header  [collapsedHeight]="'150px'" [expandedHeight]="'150px'" >
+
+      <img src="../../assets/img/bkinm3.png" height="50" width="150"/></mat-expansion-panel-header>
+    <form #EdrawalRequestForm="ngForm"(ngSubmit)="onSubmit(EdrawalRequestForm.value)">
+      <mat-form-field>
+        <input matInput name="voucherID" [(ngModel)]="voucherID" placeholder="Voucher Number">
+
+        </mat-form-field>
+<mat-form-field>
+  <input matInput name="voucherPin" [(ngModel)]="voucherPin" placeholder="Voucher Number">
+
+</mat-form-field>
+
+      <button mat-raised-button  (click)="openDialog()">EDraw</button>
+    </form>
+
+    <mat-action-row>
+
+          <button mat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+    <mat-expansion-panel-header [collapsedHeight]="'150px'" [expandedHeight]="'150px'">
+
+      <img src="../../assets/img/bkim2.png" height="50" width="100"/>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput type="tel" placeholder="Cell number">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="otp">
+    </mat-form-field>
+
+
+
+    <mat-action-row>
+      <button mat-raised-button>EDraw</button>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+    <mat-expansion-panel-header [collapsedHeight]="'150px'" [expandedHeight]="'150px'">
+
+      <img src="../../assets/img/bkim1.png" height="50" width="50"/></mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput type="tel" placeholder="Cell number">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="otp">
+    </mat-form-field>
+
+    <mat-action-row>
+      <button mat-raised-button>EDraw</button>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">End</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+</mat-accordion></mat-card>
+-->
